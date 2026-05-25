@@ -1,0 +1,679 @@
+/* ======================================================= */
+/* 1. MENU STYLING (ASSUMING ELEMENTOR NAV MENU WIDGET) */
+/* ======================================================= */
+
+/* Styles the individual list items for horizontal layout */
+.menu {
+    list-style: none !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    /* Spreads links out */
+    padding: 15px 0 !important;
+    margin: 0 !important;
+}
+
+/* Styles the actual links (text color, font) */
+.menu li a {
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 24px !important;
+    font-family: 'Oswald', sans-serif !important;
+    /* Use your preferred font */
+    font-style: italic !important;
+}
+
+/* ======================================================= */
+/* 2. SITE TITLES AND TAGLINE STYLING */
+/* ======================================================= */
+
+/* Sets the color of the site title to yellow */
+.site-title a,
+.site-title {
+    color: #FFEB3B !important;
+    /* A bright, distinct yellow */
+}
+
+/* Sets the color of the site tagline/description to white */
+.site-description {
+    color: #FFFFFF !important;
+}
+
+/* Sets the color of the main content's page title to white (if not hidden) */
+.entry-title,
+h1.entry-title,
+.page-title {
+    color: #FFFFFF !important;
+    /* Pure white */
+}
+
+/* ======================================================= */
+/* 3. WPFORMS READABILITY FIXES */
+/* ======================================================= */
+
+/* 1. Sets the color of all form labels (Name, Email, etc.) to WHITE */
+.wpforms-field-label,
+.wpforms-form label {
+    color: #FFFFFF !important;
+}
+
+/* 2. Styles the INPUT FIELDS to have black text on a white background */
+.wpforms-field input[type="text"],
+.wpforms-field input[type="email"],
+.wpforms-field input[type="tel"],
+.wpforms-field input[type="url"],
+.wpforms-field select,
+.wpforms-field textarea {
+    color: #000000 !important;
+    /* Text typed by the user should be BLACK */
+    background-color: #FFFFFF !important;
+    /* Background of the input box should be WHITE */
+    border: 1px solid #CCCCCC !important;
+}
+
+/* 3. Targets the confirmation/success message text */
+.wpforms-confirmation-container p {
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* 4. TRIBE EVENTS CALENDAR STYLING (ULTIMATE FIXES) */
+/* This is the final, highest-priority code to force all text to white/yellow. */
+/* ======================================================= */
+
+/* 1. Sets the background for all main calendar areas to black */
+.tribe-events-content,
+.tribe-events-calendar-list {
+    background-color: #000000 !important;
+}
+
+/* 2. Targets all event links/titles to be your brand yellow */
+.tribe-events a,
+.tribe-events-list-event-title a {
+    color: #FFEB3B !important;
+    /* Bright Yellow/Gold */
+    font-size: 24px !important;
+}
+
+/* 3. FINAL BRUTE-FORCE OVERRIDE FOR DARK GRID TEXT AND HEADERS */
+
+/* Targets day names (MON, TUE, etc.) and calendar headers */
+#tribe-events-content .tribe-events-calendar th,
+#tribe-events-content .tribe-events-calendar-day-header,
+#tribe-events-content .tribe-events-calendar__header-column-title {
+    color: #FFFFFF !important;
+}
+
+/* Targets the individual date numbers and event details within the grid cells */
+#tribe-events-content .tribe-events-calendar td div a,
+#tribe-events-content .tribe-events-calendar td div span,
+#tribe-events-content .tribe-events-calendar td .tribe-events-calendar-day-text,
+#tribe-events-content .tribe-events-calendar__day .tribe-events-calendar__day-date {
+    color: #FFFFFF !important;
+}
+
+/* Make event dates yellow for visibility (highest priority) */
+#tribe-events .tribe-events-c-day-grid-cell--has-events .tribe-events-calendar__day-date {
+    color: #FFEB3B !important;
+}
+
+/* Force all other supporting text to White */
+#tribe-events-content *,
+.tribe-events-list__event-details * {
+    color: #FFFFFF !important;
+    font-size: 16px !important;
+}
+
+/* --- FINAL FIX FOR STUBBORN CALENDAR DATE NUMBERS --- */
+
+/* 1. Targets the actual date number (e.g., the '3') */
+.tribe-events-calendar-month__day-date-daynum {
+    color: #FFFFFF !important;
+}
+
+/* 2. Targets the day names (Mon, Tue, Wed, etc.) if they are still dark */
+.tribe-events-calendar-day-header {
+    color: #FFFFFF !important;
+}
+
+/* 3. Targets the 'next upcoming events' text (which is still dark in your image) */
+.tribe-events-c-messages__message-text {
+    color: #FFEB3B !important;
+}
+
+/* --- FIX: Change Day Names (Mon, Tue, Wed) to Green --- */
+
+/* Targets the specific class for the calendar column headers */
+.tribe-events-calendar-month__header-column-title {
+    color: #00FF00 !important;
+    /* Bright Green */
+}
+
+/* --- FIX: "No results found for this view" text to White --- */
+
+/* Targets the main message container that holds the plain text */
+.tribe-events-c-messages__message {
+    color: #FFFFFF !important;
+}
+
+/* Also target the generic message text inside the container for max specificity */
+.tribe-events-c-messages__message p,
+.tribe-events-c-messages__message div {
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* FIX 1: "Find Events" BUTTON (White Text on Blue Background) */
+/* ======================================================= */
+
+/* Targets the main Find Events button container and button */
+#tribe-events-content .tribe-events-c-search__button,
+#tribe-events-content button[type="submit"] {
+    /* Set the button background color */
+    background-color: #0047AB !important;
+    /* Set the text color to white */
+    color: #FFFFFF !important;
+    /* Add padding to make it look like a button */
+    padding: 10px 15px !important;
+    border-radius: 5px !important;
+    /* Optional: adds rounded corners */
+}
+
+/* ======================================================= */
+/* FIX 1: "Find Events" BUTTON (Re-verified) */
+/* ======================================================= */
+
+/* Targets the Find Events submit button */
+#tribe-events-content .tribe-events-c-search__button {
+    background-color: #0047AB !important;
+    /* Dark Blue Background */
+    color: #FFFFFF !important;
+    padding: 8px 15px !important;
+    border-radius: 5px !important;
+}
+
+/* Ensure the text inside the button remains white */
+#tribe-events-content .tribe-events-c-search__button-text {
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* FIX: Search Edit Box to Dark Gray with White Text (Final) */
+/* ======================================================= */
+
+/* Targets the core input field class */
+.tribe-common-form-control-text__input.tribe-events-c-search__input {
+    /* Set the background of the input box */
+    background-color: #333333 !important;
+    /* Set the color of the text the user types */
+    color: #FFFFFF !important;
+    /* Set a clean white border */
+    border: 1px solid #FFFFFF !important;
+    /* Adjust height */
+    height: 40px !important;
+}
+
+/* Targets the placeholder text ("Search for events") */
+.tribe-common-form-control-text__input.tribe-events-c-search__input::placeholder {
+    color: #CCCCCC !important;
+    /* Light gray for placeholder text */
+    opacity: 1 !important;
+}
+
+/* Fix for the focus border color (when the user clicks in the box) */
+.tribe-common-form-control-text__input.tribe-events-c-search__input:focus {
+    border-color: #FFEB3B !important;
+    /* Yellow border on focus */
+}
+
+/* ======================================================= */
+/* FIX: "Find Events" Button (Final White on Blue) */
+/* ======================================================= */
+
+/* Targets the main button container */
+.tribe-events-c-search__button {
+    /* Set the button background color */
+    background-color: #0047AB !important;
+    /* Set the text color to white */
+    color: #FFFFFF !important;
+    /* Ensure padding and border-radius match other buttons */
+    padding: 10px 15px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    /* Remove any default button borders */
+
+    /* Ensure the button text color is white */
+    font-weight: bold !important;
+}
+
+/* Fixes the text color inside the button (highest priority) */
+.tribe-events-c-search__button-text {
+    color: #FFFFFF !important;
+}
+
+/* Optional: Hover effect */
+.tribe-events-c-search__button:hover {
+    background-color: #003377 !important;
+    /* Slightly darker blue on hover */
+}
+
+/* ======================================================= */
+/* FIX: Change Date Picker Container to Static Magenta Button */
+/* ======================================================= */
+
+/* Targets the main date picker container */
+.tribe-events-c-top-bar__datepicker-desktop {
+    /* Background Color: Magenta */
+    background-color: #FF00FF !important;
+    /* Text Color (The actual month name inside it, if visible) */
+    color: #FFFFFF !important;
+
+    /* Add padding/display to make it look like a button */
+    display: inline-block !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    border: none !important;
+}
+
+/* 1. SUPPRESS DEFAULT HOVER EFFECT */
+/* We target the hover state and force the color to stay the same */
+.tribe-events-c-top-bar__datepicker-desktop:hover,
+.tribe-events-c-top-bar__datepicker-desktop:focus {
+    background-color: #FF00FF !important;
+    /* Keep it bright magenta */
+    color: #FFFFFF !important;
+    cursor: default !important;
+    /* Change cursor to indicate no action */
+}
+
+/* 2. Fix inner elements text color if the container doesn't force it */
+.tribe-events-c-top-bar__datepicker-desktop span,
+.tribe-events-c-top-bar__datepicker-desktop a {
+    color: #FFFFFF !important;
+}
+
+/* --- FIX: Force Event Time Text to White --- */
+
+/* Targets the container holding the time text */
+.tribe-events-calendar-month__calendar-event-datetime {
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* FIX: Disable Hover Effect on Calendar Prev/Next Buttons */
+/* ======================================================= */
+
+/* 1. Targets the default state of the buttons for a consistent look */
+.tribe-events-c-top-bar__nav-link {
+    background-color: transparent !important;
+    /* Ensure clean background */
+    border-color: transparent !important;
+    /* Ensure no default border */
+    color: #FFFFFF !important;
+    /* Keep arrow color white */
+}
+
+/* 2. Targets the HOVER, FOCUS, and ACTIVE states to suppress changes */
+.tribe-events-c-top-bar__nav-link:hover,
+.tribe-events-c-top-bar__nav-link:focus,
+.tribe-events-c-top-bar__nav-link:active {
+    background-color: transparent !important;
+    /* Force background NOT to change on hover */
+    color: #FFFFFF !important;
+    /* Force arrow color NOT to change on hover */
+    box-shadow: none !important;
+    /* Remove any glow or shadow on hover/focus */
+    cursor: default !important;
+    /* Optional: Change cursor to indicate no action */
+}
+
+/* 3. Targets the 'DISABLED' state for the boundary arrows (e.g., button is greyed out) */
+.tribe-events-c-top-bar__nav-link[aria-label^="Previous"][disabled] {
+    opacity: 0.5 !important;
+    /* Keeps it slightly visible but clearly inactive */
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* FIX: "Subscribe to calendar" Button (White on Blue) */
+/* ======================================================= */
+
+/* 1. Targets the default state of the subscribe button */
+.tribe-events-c-subscribe-dropdown__button-text {
+    /* Set the button background color */
+    background-color: #0047AB !important;
+    /* Set the text color to white */
+    color: #FFFFFF !important;
+    /* Add padding to make it look like a button */
+    padding: 8px 15px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+
+/* 2. Fixes the hover state to use a slightly darker blue */
+.tribe-events-c-subscribe-dropdown__button-text:hover {
+    background-color: #003377 !important;
+    /* Slightly darker blue on hover */
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* FIX: Change Month Separator Text (November 2025) to Green */
+/* ======================================================= */
+
+/* Targets the time element and specific class for the month separator */
+.tribe-events-calendar-list__month-separator-text {
+    color: #00FF00 !important;
+    /* Bright Green */
+    font-size: 20px !important;
+    /* Optional: Make it slightly larger to stand out */
+}
+
+/* --- FINAL FIX: Add Subtle Contrast Background to Dim Description Text --- */
+/* --- ULTIMATE FIX: Force Event Description Text Bright White --- */
+
+/* Targets the description and all elements inside it with highest priority */
+.tribe-events-calendar-list__event-description,
+.tribe-events-calendar-list__event-description * {
+    color: #FFFFFF !important;
+    /* Forces the text to be pure white */
+    opacity: 1 !important;
+    /* CRITICAL: Forces full brightness, disabling any dimming effect */
+}
+
+/* ======================================================= */
+/* ULTIMATE FIX: Prev/Next Month Buttons (Fuchsia Static) */
+/* ======================================================= */
+
+/* Targets the main button container and list item for all states */
+.tribe-events-c-nav__list-item-prev,
+.tribe-events-c-nav__list-item-next,
+.tribe-events-c-nav__prev,
+.tribe-events-c-nav__next {
+    /* Set the color of the text/icons and remove visual background changes */
+    color: #FF00FF !important;
+    /* Fuchsia Text Color */
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Targets the HOVER, FOCUS, and ACTIVE states of the button to suppress changes */
+.tribe-events-c-nav__prev:hover,
+.tribe-events-c-nav__next:hover,
+.tribe-events-c-nav__prev:focus,
+.tribe-events-c-nav__next:focus,
+.tribe-events-c-nav__prev:active,
+.tribe-events-c-nav__next:active {
+    color: #FF00FF !important;
+    /* Force Fuchsia */
+    background-color: transparent !important;
+    /* Force no background change */
+    box-shadow: none !important;
+}
+
+/* Targets all text/span elements inside the buttons */
+.tribe-events-c-nav__prev *,
+.tribe-events-c-nav__next * {
+    color: #FF00FF !important;
+    fill: #FF00FF !important;
+    /* CRITICAL: Targets SVG icons (the arrows) */
+}
+
+/* ======================================================= */
+/* FIX: Prev/Next Month Buttons (White Text on Fuchsia Background - Static) */
+/* ======================================================= */
+
+/* 1. Targets the default state of the buttons for the Fuchsia background */
+.tribe-events-c-nav__prev,
+.tribe-events-c-nav__next {
+    /* Set the button background to Fuchsia */
+    background-color: #FF00FF !important;
+    /* Set the color of the arrows/text to White */
+    color: #FFFFFF !important;
+
+    /* Add padding to make them look like buttons */
+    padding: 8px 10px !important;
+    border-radius: 5px !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 2. Targets all inner text/span/SVG elements (arrows/labels) */
+.tribe-events-c-nav__prev *,
+.tribe-events-c-nav__next * {
+    color: #FFFFFF !important;
+    /* Forces text to White */
+    fill: #FFFFFF !important;
+    /* Forces SVG icons (the arrows) to White */
+}
+
+/* 3. Targets the HOVER, FOCUS, and ACTIVE states to suppress changes (STATIC) */
+.tribe-events-c-nav__prev:hover,
+.tribe-events-c-nav__next:hover,
+.tribe-events-c-nav__prev:focus,
+.tribe-events-c-nav__next:focus {
+    background-color: #FF00FF !important;
+    /* Force background NOT to change */
+    color: #FFFFFF !important;
+    /* Force arrow color NOT to change */
+    cursor: default !important;
+}
+
+/* ======================================================= */
+/* FIX: Event Weekday (Mon/Tue) to Bold Blue */
+/* ======================================================= */
+
+/* Targets the specific class for the event weekday text */
+.tribe-events-calendar-list__event-date-tag-daynum {
+    color: #007BFF !important;
+    /* Bright Blue */
+    font-weight: bold !important;
+    /* Makes the text bold */
+}
+
+/* --- FIX: Reinforce Weekday Text to Bold Blue --- */
+.tribe-events-calendar-list__event-date-tag-weekday {
+    color: #007BFF !important;
+    /* Bright Blue */
+    font-weight: 800 !important;
+    /* Use a higher value for maximum boldness */
+}
+
+/* ======================================================= */
+/* FIX: Event Start Date/Time (tribe-event-date-start) to Bold Blue */
+/* ======================================================= */
+
+/* Targets the specific class for the event start date/time */
+.tribe-event-date-start {
+    color: #007BFF !important;
+    /* Bright Blue */
+    font-weight: bold !important;
+    /* Makes the text bold */
+}
+
+/* ======================================================= */
+/* FIX: Event Time (tribe-event-time) to Bold Blue */
+/* ======================================================= */
+
+/* Targets the specific class for the event time */
+.tribe-event-time {
+    color: #007BFF !important;
+    /* Bright Blue */
+    font-weight: bold !important;
+    /* Makes the text bold */
+}
+
+/* ======================================================= */
+/* FIX: Event Venue Name (tribe-events-calendar-list__event-venue) to White */
+/* ======================================================= */
+
+/* Targets the specific class for the event venue name */
+.tribe-events-calendar-list__event-venue {
+    color: #FFFFFF !important;
+    /* Force text to White */
+}
+
+/* ======================================================= */
+/* FIX: Time Separator (tribe-events-calendar-day__time-separator-text) to Bold Blue */
+/* ======================================================= */
+
+/* Targets the specific class for the time separator text */
+.tribe-events-calendar-day__time-separator-text {
+    color: #007BFF !important;
+    /* Bright Blue */
+    font-weight: bold !important;
+    /* Makes the text bold */
+}
+
+/* ======================================================= */
+/* FIX: Force Uniform Text Size on Prev/Next Nav Buttons */
+/* ======================================================= */
+
+/* Targets the specific text label inside both buttons */
+.tribe-events-c-nav__prev-label,
+.tribe-events-c-nav__next-label {
+    font-size: 16px !important;
+    /* Force a consistent size (adjust as needed) */
+    font-weight: bold !important;
+    /* Ensure boldness remains consistent */
+}
+
+/* Also target the plural labels, just in case they are visible and larger */
+.tribe-events-c-nav__prev-label-plural,
+.tribe-events-c-nav__next-label-plural {
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+
+/* ======================================================= */
+/* FIX: Event Day Content (tribe-events-calendar-day__event-content) to White */
+/* ======================================================= */
+
+/* Targets the main content area for a single event on the detailed day view */
+.tribe-events-calendar-day__event-content,
+.tribe-events-calendar-day__event-content * {
+    /* Targets the wrapper and all nested elements */
+    color: #FFFFFF !important;
+    /* Force all text to White */
+}
+
+/* ======================================================= */
+/* FIX: Event Start Date/Time (tribe-event-date-start) to Bold Blue (Reinforced) */
+/* ======================================================= */
+
+/* Targets the specific class for the event start date/time */
+.tribe-event-date-start {
+    color: #007BFF !important;
+    /* Bright Blue */
+    font-weight: bold !important;
+    /* Ensures the text is bold */
+}
+
+/* ======================================================= */
+/* FIX: Event Time (tribe-event-time) to Bold Blue (Reinforced) */
+/* ======================================================= */
+
+/* Targets the specific class for the event time */
+.tribe-event-time {
+    color: #007BFF !important;
+    /* Bright Blue */
+    font-weight: bold !important;
+    /* Ensures the text is bold */
+}
+
+/* ======================================================= */
+/* 3. WPFORMS READABILITY FIXES (UNIFIED STYLING) */
+/* ======================================================= */
+
+/* 1. Sets the color of all form labels (Name, Email, etc.) to WHITE */
+.wpforms-field-label,
+.wpforms-form label {
+    color: #FFFFFF !important;
+}
+
+/* 2. Styles the INPUT FIELDS (Name, Email, Subject) to match Calendar Search */
+.wpforms-field input[type="text"],
+.wpforms-field input[type="email"],
+.wpforms-field input[type="tel"],
+.wpforms-field input[type="url"],
+.wpforms-field select,
+.wpforms-field textarea {
+    /* Set the background of the input box to dark gray */
+    background-color: #333333 !important;
+    /* Set the color of the text the user types to white */
+    color: #FFFFFF !important;
+    /* Set a white border to define the box clearly */
+    border: 1px solid #FFFFFF !important;
+    /* Ensure height is similar */
+    height: 40px !important;
+}
+
+/* 3. Targets the placeholder text inside the WPForms fields */
+.wpforms-field input::placeholder,
+.wpforms-field textarea::placeholder {
+    color: #CCCCCC !important;
+    /* Use a light gray for the placeholder text */
+    opacity: 1 !important;
+}
+
+/* 4. Targets the confirmation/success message text (No Change) */
+.wpforms-confirmation-container p {
+    color: #FFFFFF !important;
+}
+
+/* ======================================================= */
+/* FINAL BRUTE-FORCE FIX: MOBILE MENU TEXT READABILITY */
+/* ======================================================= */
+
+/* 1. Targets ALL text inside the mobile menu list (highest specificity) */
+#site-navigation .menu-item a,
+#site-navigation .menu-item,
+.main-navigation ul li a {
+    color: #FFEB3B !important;
+    /* Force all menu text to YELLOW */
+    background-color: transparent !important;
+    /* Remove any lingering white background on links */
+}
+
+/* 2. Targets the mobile dropdown/drawer container for a dark background */
+.elementor-nav-menu--dropdown,
+.mobile-menu-container,
+.main-navigation {
+    background-color: #111111 !important;
+    /* Ensure the menu drawer is dark */
+}
+
+/* 3. Ensures the close button (the 'X') is visible */
+.elementor-menu-toggle {
+    color: #FFFFFF !important;
+}
+
+/* Force Primary Navigation Menu Links to be Visible */
+.primary-menu a,
+#site-navigation a,
+.nav-menu a,
+.main-navigation a {
+    color: #ffcc00 !important;
+    /* Your branding yellow - change to #000000 if you want black links */
+    font-weight: bold !important;
+}
+
+/* Ensure hover states remain visible */
+.primary-menu a:hover,
+#site-navigation a:hover,
+.main-navigation a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+/* Force Footer Structural Constraints */
+footer,
+.site-footer,
+#colophon {
+    clear: both !important;
+    display: block !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    padding: 20px 0 !important;
+}
