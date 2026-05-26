@@ -40,14 +40,8 @@ wp-config.php
 # ====================================================================
 # PLUGINS & THEMES (STRATEGY)
 # ====================================================================
-# Ignore standard third-party plugins and themes to keep the repo clean.
-# If you want to track a specific custom child-theme or plugin, 
-# you can explicitly whitelist it using the '!' prefix below.
-/wp-content/plugins/*
-/wp-content/themes/*
-
-# WHITELIST: Explicitly pull your specific assets back into Git control
-!/wp-content/themes/hello-elementor/
+# We are intentionally tracking all plugins and themes ("Monolithic" strategy)
+# to guarantee that Staging and Production servers never diverge.
 
 # ====================================================================
 # DEVELOPMENT UTILITIES & BACKUPS
