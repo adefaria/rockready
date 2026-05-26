@@ -279,5 +279,30 @@ function enqueue_custom_flat_stylesheet() {
         array(),
         filemtime(get_stylesheet_directory() . '/additional.css')
     );
+
+    wp_enqueue_script(
+        'custom-calendar-script',
+        get_stylesheet_directory_uri() . '/custom-calendar.js',
+        array('jquery'),
+        filemtime(get_stylesheet_directory() . '/custom-calendar.js'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_flat_stylesheet', 999);
+
+// Force the mobile calendar view to default to list mode
+add_filter( 'tec_events_default_view', function( $default_view, $type ) {
+    if ( wp_is_mobile() || isset( $_GET['mobile_test'] ) ) {
+        return 'list';
+    }
+    return $default_view;
+}, 100, 2 );
+
+// Disable Outlook subscription links in the calendar subscribe dropdown
+add_filter( 'tec_views_v2_subscribe_link_outlook-365_visibility', '__return_false', 100 );
+add_filter( 'tec_views_v2_subscribe_link_outlook-live_visibility', '__return_false', 100 );
+add_filter( 'tec_views_v2_subscribe_link_outlook-ics_visibility', '__return_false', 100 );
+
+
+
+

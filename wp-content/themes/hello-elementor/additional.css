@@ -677,3 +677,295 @@ footer,
     margin-top: 0 !important;
     padding: 20px 0 !important;
 }
+
+/* ======================================================= */
+/* 6. LIGHT MODE COMPATIBILITY OVERRIDES                   */
+/* ======================================================= */
+@media (prefers-color-scheme: light) {
+    /* Revert text colors to dark for readability */
+    .menu li a,
+    .site-description,
+    .entry-title,
+    h1.entry-title,
+    .page-title,
+    .wpforms-field-label,
+    .wpforms-form label,
+    .wpforms-confirmation-container p {
+        color: #111111 !important;
+    }
+
+    /* Calendar Backgrounds */
+    .tribe-events-content,
+    .tribe-events-calendar-list,
+    .tribe-events {
+        background-color: transparent !important;
+    }
+
+    /* Base Calendar Text */
+    .tribe-events *,
+    .tribe-events-list__event-details *,
+    .tribe-events-calendar-month__day-date-daynum,
+    .tribe-events-calendar-day-header,
+    .tribe-events-c-messages__message,
+    .tribe-events-c-messages__message p,
+    .tribe-events-c-messages__message div,
+    .tribe-events-calendar-list__event-description,
+    .tribe-events-calendar-list__event-description *,
+    .tribe-events-calendar-list__event-venue,
+    .tribe-events-calendar-day__event-content,
+    .tribe-events-calendar-day__event-content *,
+    .tribe-events-c-top-bar__nav-link,
+    .tribe-events-calendar-month__header-column-title {
+        color: #111111 !important;
+    }
+
+    /* Re-enforce button text colors to white */
+    .tribe-events .tribe-events-c-search__button,
+    .tribe-events .tribe-events-c-search__button *,
+    .tribe-events-c-top-bar__datepicker-desktop,
+    .tribe-events-c-top-bar__datepicker-desktop *,
+    .tribe-events-c-subscribe-dropdown__button-text,
+    .tribe-events-c-nav__prev,
+    .tribe-events-c-nav__next,
+    .tribe-events-c-nav__prev *,
+    .tribe-events-c-nav__next * {
+        color: #FFFFFF !important;
+    }
+
+    /* Override Yellow Links to Blue */
+    .tribe-events a,
+    .tribe-events-list-event-title a,
+    #tribe-events .tribe-events-c-day-grid-cell--has-events .tribe-events-calendar__day-date,
+    .tribe-events-c-messages__message-text {
+        color: #0047AB !important; /* Dark Blue for links */
+    }
+
+    /* Inputs in light mode */
+    .tribe-common-form-control-text__input.tribe-events-c-search__input,
+    .wpforms-field input[type="text"],
+    .wpforms-field input[type="email"],
+    .wpforms-field input[type="tel"],
+    .wpforms-field input[type="url"],
+    .wpforms-field select,
+    .wpforms-field textarea {
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+        border: 1px solid #CCCCCC !important;
+    }
+    
+    .tribe-common-form-control-text__input.tribe-events-c-search__input::placeholder,
+    .wpforms-field input::placeholder,
+    .wpforms-field textarea::placeholder {
+        color: #777777 !important;
+    }
+
+    /* Fix mobile menu text */
+    #site-navigation .menu-item a,
+    #site-navigation .menu-item,
+    .main-navigation ul li a,
+    .primary-menu a,
+    .nav-menu a {
+        color: #111111 !important;
+    }
+    
+    .elementor-nav-menu--dropdown,
+    .mobile-menu-container,
+    .main-navigation {
+        background-color: #F8F8F8 !important;
+    }
+
+    .elementor-menu-toggle {
+        color: #111111 !important;
+    }
+}
+
+/* ======================================================= */
+/* 7. GCAL ANDROID SUBSCRIPTION MODAL (PREMIUM GLASSMORPHISM) */
+/* ======================================================= */
+.gcal-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gcal-modal-overlay.gcal-show {
+    opacity: 1;
+}
+
+.gcal-modal-content {
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(255, 235, 59, 0.3);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 480px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+.gcal-modal-overlay.gcal-show .gcal-modal-content {
+    transform: scale(1);
+}
+
+.gcal-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.gcal-modal-close:hover {
+    color: #FFEB3B;
+}
+
+.gcal-modal-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.gcal-modal-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+.gcal-modal-header h2 {
+    color: #FFEB3B !important;
+    font-size: 22px !important;
+    margin: 0 !important;
+    font-weight: bold !important;
+}
+
+.gcal-modal-body p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    color: #E0E0E0 !important;
+    margin-bottom: 15px !important;
+}
+
+.gcal-modal-url-box {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px dashed rgba(255, 235, 59, 0.5);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    position: relative;
+    word-break: break-all;
+}
+
+.gcal-modal-url-box code {
+    color: #FFEB3B !important;
+    font-family: monospace !important;
+    font-size: 13px !important;
+}
+
+.gcal-modal-copied-indicator {
+    display: block;
+    font-size: 12px !important;
+    color: #00FF00 !important;
+    margin-top: 5px !important;
+    font-weight: bold !important;
+}
+
+.gcal-modal-body h3 {
+    color: #FFFFFF !important;
+    font-size: 16px !important;
+    margin: 15px 0 10px 0 !important;
+    font-weight: bold !important;
+}
+
+.gcal-modal-body ol {
+    padding-left: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.gcal-modal-body li {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #E0E0E0 !important;
+    margin-bottom: 8px !important;
+}
+
+.gcal-modal-body li a {
+    color: #FFEB3B !important;
+    text-decoration: underline !important;
+}
+
+.gcal-modal-body li a:hover {
+    color: #FFFFFF !important;
+}
+
+.gcal-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.gcal-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+    text-align: center;
+}
+
+.gcal-btn-primary {
+    background-color: #0047AB !important;
+    color: #FFFFFF !important;
+    border: none !important;
+}
+
+.gcal-btn-primary:hover {
+    background-color: #003377 !important;
+}
+
+.gcal-btn-secondary {
+    background-color: transparent !important;
+    color: #CCCCCC !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.gcal-btn-secondary:hover {
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Prevent The Events Calendar plugin from hiding Google Calendar and iCalendar on Android devices */
+.tec-is-android .tribe-events-view--shortcode .tribe-events-c-subscribe-dropdown__list-item--gcal,
+.tec-is-android .tribe-events-view--shortcode .tribe-events-c-subscribe-dropdown__list-item--ical,
+.tec-is-android.post-type-archive-tribe_events .tribe-events-c-subscribe-dropdown__list-item--gcal,
+.tec-is-android.post-type-archive-tribe_events .tribe-events-c-subscribe-dropdown__list-item--ical {
+    display: block !important;
+}
