@@ -66,18 +66,11 @@ __( 'Continue to new Kit', 'elementor' );
 __( 'Close', 'elementor' );
 __( '%s was successfully deleted', 'elementor' );
 __( 'Your Kit', 'elementor' );
+__( 'Close', 'elementor' );
+__( 'Tip', 'elementor' );
 __( 'Add New', 'elementor' );
 __( 'Close', 'elementor' );
-__( 'Tip', 'elementor' );
-__( 'Close', 'elementor' );
 __( 'Theme Builder', 'elementor' );
-__( 'Info', 'elementor' );
-__( 'Learn More', 'elementor' );
-__( 'Tip', 'elementor' );
-__( 'Watch Video', 'elementor' );
-__( 'Upgrade Now', 'elementor' );
-__( 'Site Parts', 'elementor' );
-__( 'All Parts', 'elementor' );
 __( 'Upgrade', 'elementor' );
 __( 'Customize every part of your site', 'elementor' );
 __( 'Get total control, consistency and a faster workflow by designing the recurring parts that make up a complete website like the Header & Footer, Archive, 404, WooCommerce pages and more.', 'elementor' );
@@ -86,6 +79,13 @@ __( 'Theme Builder could not be loaded', 'elementor' );
 __( 'We’re sorry, but something went wrong. Click on ‘Learn more’ and follow each of the steps to quickly solve it.', 'elementor' );
 __( 'Learn More', 'elementor' );
 __( 'Go Back', 'elementor' );
+__( 'Info', 'elementor' );
+__( 'Learn More', 'elementor' );
+__( 'Tip', 'elementor' );
+__( 'Watch Video', 'elementor' );
+__( 'Upgrade Now', 'elementor' );
+__( 'Site Parts', 'elementor' );
+__( 'All Parts', 'elementor' );
 __( 'Error:', 'elementor' );
 __( 'Loading', 'elementor' );
 __( 'Categories', 'elementor' );
@@ -247,9 +247,6 @@ __( 'Kit Library', 'elementor' );
 __( 'Loading...', 'elementor' );
 __( 'WHAT\'S INSIDE', 'elementor' );
 __( 'View Demo', 'elementor' );
-__( 'No favorites here yet...', 'elementor' );
-__( 'Use the heart icon to save Website Templates that inspire you. You\'ll be able to find them here.', 'elementor' );
-__( 'Continue browsing.', 'elementor' );
 __( 'Website Templates', 'elementor' );
 __( 'Featured', 'elementor' );
 __( 'New', 'elementor' );
@@ -275,6 +272,9 @@ __( 'Once you\'ve picked a winner, apply it to your site!', 'elementor' );
 __( 'Happy browsing!', 'elementor' );
 __( 'Learn more', 'elementor' );
 __( 'about using templates', 'elementor' );
+__( 'No favorites here yet...', 'elementor' );
+__( 'Use the heart icon to save Website Templates that inspire you. You\'ll be able to find them here.', 'elementor' );
+__( 'Continue browsing.', 'elementor' );
 __( 'Access Website Templates with a plan upgrade', 'elementor' );
 __( 'Your current plan doesn\'t include saving and importing Website Templates. Upgrade to the Advanced plan or higher to use this feature.', 'elementor' );
 __( 'Compare plans', 'elementor' );
@@ -479,7 +479,7 @@ __( 'See it Live', 'elementor' );
 __( 'Close', 'elementor' );
 __( 'Import', 'elementor' );
 __( 'Kit is live illustration', 'elementor' );
-__( 'Your website templates is now live on your site!', 'elementor' );
+__( 'Your website template is now live on your site!', 'elementor' );
 __( 'You\'ve imported and applied the following to your site:', 'elementor' );
 __( 'Build sites faster with Website Templates.', 'elementor' );
 __( 'Show me how', 'elementor' );
@@ -536,6 +536,19 @@ __( 'Export as .zip', 'elementor' );
 __( 'Export a Website template?', 'elementor' );
 __( 'Choose which Elementor components - templates, content and site settings - to include in your website templates file. By default, all of your components will be exported.', 'elementor' );
 __( 'Learn more', 'elementor' );
+__( 'Version' ) } ${ cellLinkProps.text }` } <Icon className="eicon-editor-external-link" />
+		</InlineLink>
+	);
+
+	const getHeaders = () => {
+		if ( ! withHeader ) {
+			return [];
+		}
+
+		const headers = [ 'Plugin Name', 'Version' ];
+
+		if ( withStatus ) {
+			headers.splice( 1, 0, 'Status' );
 __( 'Previous', 'elementor' );
 __( 'Next', 'elementor' );
 __( 'Learn More', 'elementor' );
@@ -594,21 +607,6 @@ __( 'You can find it in the My Website Templates tab.', 'elementor' );
 __( 'Once the download is complete, you can upload it to be used for other sites.', 'elementor' );
 __( 'Build sites faster with Website Templates.', 'elementor' );
 __( 'Is the automatic download not starting?', 'elementor' );
-__( 'Version' ) } ${ cellLinkProps.text }` } <Icon className="eicon-editor-external-link" />
-		</InlineLink>
-	);
-
-	const getHeaders = () => {
-		if ( ! withHeader ) {
-			return [];
-		}
-
-		const headers = [ 'Plugin Name', 'Version' ];
-
-		if ( withStatus ) {
-			headers.splice( 1, 0, 'Status' );
-__( 'Export', 'elementor' );
-__( 'Close', 'elementor' );
 __( 'Unable to download the Website Template', 'elementor' );
 __( 'We couldn’t download the Website Template due to technical difficulties on our part. Try again and if the problem persists contact ', 'elementor' );
 __( 'Support', 'elementor' );
@@ -658,6 +656,8 @@ __( 'Upgrade now', 'elementor' );
 __( 'Cancel', 'elementor' );
 __( 'Export as .zip', 'elementor' );
 __( 'Try Again', 'elementor' );
+__( 'Export', 'elementor' );
+__( 'Close', 'elementor' );
 __( 'Edit Template', 'elementor' );
 __( 'Imported', 'elementor' );
 __( 'Existing', 'elementor' );
@@ -667,11 +667,11 @@ __( 'Is your Elementor Pro ready?', 'elementor' );
 __( 'If you’ve purchased, installed & activated Elementor Pro, we can continue importing all the parts of this site.', 'elementor' );
 __( 'Yes', 'elementor' );
 __( 'Not yet', 'elementor' );
-__( 'Plugins to add:', 'elementor' );
-__( 'Missing Required Plugins:', 'elementor' );
 __( 'Previous', 'elementor' );
 __( 'Next', 'elementor' );
 __( 'Plugins you already have:', 'elementor' );
+__( 'Plugins to add:', 'elementor' );
+__( 'Missing Required Plugins:', 'elementor' );
 __( 'Previous', 'elementor' );
 __( 'Import', 'elementor' );
 __( 'Note:', 'elementor' );
