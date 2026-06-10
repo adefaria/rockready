@@ -59,5 +59,6 @@ tec_settings_backup.txt
 
 # Ignore specific plugin backup dumps
 /wp-content/ai1wm-backups/
+/wp-content/plugins/all-in-one-wp-migration/storage/
 /wp-content/updraft/
 .htaccess
