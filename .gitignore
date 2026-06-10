@@ -37,6 +37,13 @@ wp-config.php
 /wp-content/backups-dup-lite/
 /wp-content/debug.log
 
+# PLUGINS: Ignore them completely so you can use the web/CLI updaters
+/wp-content/plugins/
+
+# THEMES: Ignore all standard themes, EXCEPT your development theme
+/wp-content/themes/*
+!/wp-content/themes/hello-elementor/
+
 # ====================================================================
 # PLUGINS & THEMES (STRATEGY)
 # ====================================================================
