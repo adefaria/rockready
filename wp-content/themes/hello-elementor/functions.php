@@ -303,6 +303,47 @@ add_filter( 'tec_views_v2_subscribe_link_outlook-365_visibility', '__return_fals
 add_filter( 'tec_views_v2_subscribe_link_outlook-live_visibility', '__return_false', 100 );
 add_filter( 'tec_views_v2_subscribe_link_outlook-ics_visibility', '__return_false', 100 );
 
+// Add a honeypot field to the comment form to prevent automated spam
+function rr_add_comment_honeypot() {
+    echo '<p class="comment-form-hp-wrapper" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;">';
+    echo '<label for="rr_comment_verify_code">Leave this field blank</label>';
+    echo '<input type="text" name="rr_comment_verify_code" id="rr_comment_verify_code" value="" tabindex="-1" autocomplete="off" />';
+    echo '</p>';
+}
+add_action( 'comment_form_after_fields', 'rr_add_comment_honeypot' );
+add_action( 'comment_form_logged_in_after', 'rr_add_comment_honeypot' );
 
+// Intercept the comment submission and validate the honeypot field
+function rr_verify_comment_honeypot( $commentdata ) {
+    // Bypass verification for logged-in users (e.g. admins)
+    if ( is_user_logged_in() ) {
+        return $commentdata;
+    }
 
+    // Check if it is a trackback or pingback, bypass honeypot for those
+    if ( isset( $commentdata['comment_type'] ) && in_array( $commentdata['comment_type'], array( 'pingback', 'trackback' ), true ) ) {
+        return $commentdata;
+    }
 
+    // Check if the honeypot field is present in the POST payload
+    if ( ! isset( $_POST['rr_comment_verify_code'] ) ) {
+        // Direct POST comment submission without using the form
+        wp_die(
+            __( 'Error: Direct comment submission is not allowed. Please use the comment form on the site.', 'hello-elementor' ),
+            __( 'Spam Prevention', 'hello-elementor' ),
+            array( 'response' => 403 )
+        );
+    }
+
+    // Check if the honeypot field has been filled in by a bot
+    if ( ! empty( $_POST['rr_comment_verify_code'] ) ) {
+        wp_die(
+            __( 'Error: Spam submission detected. If you are a human, please leave the verification field blank.', 'hello-elementor' ),
+            __( 'Spam Prevention', 'hello-elementor' ),
+            array( 'response' => 403 )
+        );
+    }
+
+    return $commentdata;
+}
+add_filter( 'preprocess_comment', 'rr_verify_comment_honeypot' );
