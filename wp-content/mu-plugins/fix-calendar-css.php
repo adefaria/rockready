@@ -17,6 +17,14 @@ add_action('wp_head', function() {
         color: #111111 !important;
     }
     
+    /* Day Names (S, M, T... and SAT, SUN...) */
+    body .tribe-events .tribe-events-calendar-month__header-column-title,
+    body .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
+    body .tribe-events .tribe-common-b3 {
+        color: #0056b3 !important; 
+        font-weight: bold !important;
+    }
+
     /* "This Month" Button */
     body .tribe-events .tribe-events-c-top-bar__today-button {
         background-color: transparent !important;
@@ -51,7 +59,6 @@ add_action('wp_head', function() {
     body .tribe-events .tribe-events-calendar-list__event-title a {
         color: #111111 !important;
     }
-    body .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
     body .tribe-events .tribe-events-calendar-list__event-date-tag-daynum,
     body .tribe-events .tribe-events-calendar-list__event-date-tag-datetime,
     body .tribe-events .tribe-events-calendar-list__event-venue-title,
