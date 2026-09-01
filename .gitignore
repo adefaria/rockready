@@ -45,6 +45,9 @@ wp-config.php
 /wp-content/themes/*
 !/wp-content/themes/your-custom-theme-name/
 
+# Whitelist rules: Allow Must-Use plugins
+!/wp-content/mu-plugins/
+
 # ====================================================================
 # DEVELOPMENT UTILITIES & BACKUPS
 # ====================================================================

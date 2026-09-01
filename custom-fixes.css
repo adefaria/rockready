@@ -1,0 +1,41 @@
+/* Fix Calendar Month View Contrast */
+
+.tribe-events {
+    --tec-color-text-primary: #111111 !important;
+    --tec-color-text-secondary: #333333 !important;
+}
+
+body .tribe-events .tribe-events-calendar-month__header-column-title,
+body .tribe-events .tribe-common-b3,
+body .tribe-events .tribe-events-calendar-month__day-date,
+body .tribe-events .tribe-events-calendar-month__day-date-link,
+body .tribe-events .tribe-events-calendar-month__day-date-daynum,
+body .tribe-events .tribe-common-h6,
+body .tribe-events .tribe-common-h4,
+body .tribe-events .tribe-events-c-top-bar__datepicker-button,
+body .tribe-events .tribe-events-c-top-bar__datepicker-time {
+    color: #111111 !important;
+}
+
+body .tribe-events .tribe-events-c-top-bar__datepicker-time {
+    background-color: transparent !important;
+}
+
+/* Fix Elementor Social Media Icons disappearing */
+body .elementor-widget-social-icons {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+body .elementor-social-icon {
+    display: inline-flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+body .elementor-social-icon svg, 
+body .elementor-social-icon i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    width: 1em !important;
+    height: 1em !important;
+}
