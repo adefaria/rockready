@@ -38,6 +38,31 @@ add_action('wp_head', function() {
         fill: #ffffff !important;
     }
 
+    /* Fix List View Colors */
+    body .tribe-events .tribe-events-calendar-list {
+        background-color: #ffffff !important;
+    }
+    body .tribe-events .tribe-events-calendar-list__month-separator-text {
+        color: #0056b3 !important; 
+        font-weight: bold !important;
+    }
+    body .tribe-events .tribe-events-calendar-list__event-title,
+    body .tribe-events .tribe-events-calendar-list__event-title-link,
+    body .tribe-events .tribe-events-calendar-list__event-title a {
+        color: #111111 !important;
+    }
+    body .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
+    body .tribe-events .tribe-events-calendar-list__event-date-tag-daynum,
+    body .tribe-events .tribe-events-calendar-list__event-date-tag-datetime,
+    body .tribe-events .tribe-events-calendar-list__event-venue-title,
+    body .tribe-events .tribe-events-calendar-list__event-datetime-wrapper {
+        color: #333333 !important; 
+    }
+    body .tribe-events .tribe-events-calendar-list__event-row {
+        background-color: transparent !important;
+        border-bottom: 1px solid #eeeeee !important;
+    }
+
     /* Fix Elementor Social Media Icons disappearing (Ad-blocker evasion) */
     body .elementor-widget-stealth-links,
     body .elementor-widget-stealth-links .elementor-widget-container,
