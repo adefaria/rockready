@@ -22,7 +22,16 @@ add_action('wp_head', function() {
     body .tribe-events .tribe-events-calendar-list__event-date-tag-weekday,
     body .tribe-events .tribe-common-b3 {
         color: #0056b3 !important; 
-        font-weight: bold !important;
+        font-weight: 800 !important;
+        font-size: 1.15rem !important;
+        text-transform: uppercase !important;
+    }
+
+    /* Day Numbers (1, 2, 3...) in Month View */
+    body .tribe-events .tribe-events-calendar-month__day-date,
+    body .tribe-events .tribe-events-calendar-month__day-date-link,
+    body .tribe-events .tribe-events-calendar-month__day-date-daynum {
+        color: #555555 !important;
     }
 
     /* "This Month" Button */
