@@ -46,6 +46,20 @@ add_action('wp_head', function() {
         fill: #ffffff !important;
     }
 
+    /* Search Bar Styling */
+    body .tribe-events .tribe-events-c-search__input,
+    body .tribe-events .tribe-events-c-search__input-control {
+        background-color: #ffffff !important;
+        color: #111111 !important;
+        border-color: #cccccc !important;
+    }
+    body .tribe-events .tribe-events-c-search__input::placeholder {
+        color: #666666 !important;
+    }
+    body .tribe-events .tribe-events-c-search__input-control-icon-svg {
+        fill: #333333 !important;
+    }
+
     /* Fix List View Colors */
     body .tribe-events .tribe-events-calendar-list {
         background-color: #ffffff !important;
