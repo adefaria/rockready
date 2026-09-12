@@ -489,7 +489,7 @@ foreach ($events as $ev) {
           <?php endif; ?>
         </div>
 
-        <img src="RockReady_Cartoon.jpg" alt="Rock Ready Band Cartoon" class="side-img">
+        <img src="RockReady_Cartoon.png" alt="Rock Ready Band Cartoon" class="side-img">
       </div>
 
       <!-- Footer Bar -->
